@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+     <h2>
+Post yaratish
+     </h2>
+     <form action="" method="post">{% csrf_token %}
+         {{form.as_p}}
+         <input type="submit" value="Yangilash">
+
+     </form>
+
+
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block  content %}
+
+      <h3><i> {{post.title}}</i></h3>
+       <h4>Muallif:{{post.author}}</h4>
+       <p>
+           {{post.text}}
+       </p>
+
+<h2>
+    <a href="{% url 'blog_edit' post.pk  %}"><i>Postni tahrirlash</i></a><br><br>
+    <a href="{% url 'delete' post.pk %}"><i>Postni o'chirish</i></a>
+</h2>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        {% for post in object_list %}
+     <h2>
+              <a href="{% url 'blog_detail' post.pk %}">{{post.title}}</a>
+     </h2>
+<p>
+         {{post.text|slice:":200"}}
+</p>
+
+         {%  endfor %}
+
+{%endblock content %}
